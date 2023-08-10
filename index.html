@@ -21,7 +21,7 @@
                                             { maxZoom: 19,
                                                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'})
         
-        function initialize() {
+        
             var map = L.map('map' , {
             center: [ 43.7304, -72.2887],
             zoom: 15,
@@ -30,10 +30,10 @@
           L.geoJson(nhcc, {
             onEachFeature: function(feature, layer) {
               layer.bindPopup("<b>Name: " + feature.properties.NAME + "</b>");
-            }
+            }}
                    ).addTo(map);
 
-        }
+      
       </script>
   </body>
 </html>

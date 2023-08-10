@@ -7,6 +7,8 @@
         #map { height: 400px; width: 700px; }
         html, body { height: 100%; margin: 0; padding: 0;}
       </style>
+
+      <script src="NH_Community_Center_Areas.geojson></script>
     
       <script>
 
@@ -20,6 +22,7 @@
             zoom: 15,
             layers: [OpenStreetMap_HOT]
                             })
+          L.geoJson(nhcc).addTo(map);
 
         }
       </script>

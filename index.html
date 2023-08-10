@@ -9,6 +9,7 @@
       </style>
 
       <script src="NH_Community_Center_Areas.geojson"></script>
+      <script src="New_Hampshire_Railroads.geojson"></script>
     
 
   </head>
@@ -28,6 +29,12 @@
             layers: [OpenStreetMap_HOT]
                             })
           L.geoJson(nhcc, {
+            onEachFeature: function(feature, layer) {
+              layer.bindPopup("<b>Name: " + feature.properties.NAME + "</b>");
+            }}
+                   ).addTo(map);
+
+             L.geoJson(nhr, {
             onEachFeature: function(feature, layer) {
               layer.bindPopup("<b>Name: " + feature.properties.NAME + "</b>");
             }}
